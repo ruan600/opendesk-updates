@@ -1,0 +1,17 @@
+# Publish this file as /render.yaml in the updates repository.
+# Publish all other files from this staging folder under /relay/.
+services:
+  - type: web
+    name: opendesk-relay
+    runtime: docker
+    plan: free
+    numInstances: 1
+    rootDir: relay
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: ASPNETCORE_URLS
+        value: http://0.0.0.0:10000
+      - key: DOTNET_EnableDiagnostics
+        value: "0"
