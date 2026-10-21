@@ -1,0 +1,8 @@
+# Default deny: never send desktop files, settings or publisher keys to a builder.
+**
+!Dockerfile
+!.dockerignore
+!src/
+!src/OpenDesk.Relay/
+!src/OpenDesk.Relay/OpenDesk.Relay.csproj
+!src/OpenDesk.Relay/Program.cs
